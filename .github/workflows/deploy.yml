@@ -27,8 +27,8 @@ jobs:
           USER: ${{ secrets.EC2_USER }}
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/ec2-key.pem $USER@$HOST << 'EOF'
-            cd /home/ubuntu/aws-ec2-nodejs-app  # Update this with your app's location
+            cd /home/ubuntu/aws-ec2-nodejs-app  # This is the correct path
             git pull origin main
             npm install
-            pm2 start app.js --name your-app-name --watch  # Replace 'app.js' with your entry file
+            pm2 start server.js --name your-app-name --watch  # Use 'server.js' as the entry file
           EOF

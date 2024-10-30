@@ -4,93 +4,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://js.stripe.com/v3/"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
     <link rel="icon" type="image/x-icon" href="assets/icon.svg" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div class="navbar">
-      <a class="nav-content" href="https://kubesimplify.com/" target="_blank">
-        <img src="assets/logo.svg" alt="" height="60" width="350" />
+      <a class="nav-content" href="https://www.nike.com" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg"
+          alt="Nike Logo"
+          height="60"
+          width="100"
+        />
       </a>
     </div>
 
     <div class="container">
       <div class="header">
         <div class="title">
-          <h1>Welcome to Kubesimplify Workshops! </h1>
+          <h1>Nike Products</h1>
         </div>
         <p>
-          Kubesimplify is on a mission to simplify the cloud-native for everyone. <br><br> 
-          Various initiatives such as Blogs, Twitter Threads, Twitter Spaces etc. have been started by us, all to <b>demystify</b> complex cloud-native concepts and make them simple for anyone to understand. <br><br>
-          We welcome you to yet another initiative on that path - <b>"Live Workshops"</b>
-          <br><br>
-          <center>
-            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/oiBdx7et21w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-          </center>
+          Discover the latest in Nike sportswear, footwear, and athletic apparel
+          designed to bring the best in performance and style. Whether you're
+          training or just showing off, Nike offers products that cater to all
+          your needs with advanced technology and trendy designs. Browse some of
+          our top picks below:
         </p>
       </div>
 
-      <!-- Workshop Cards -->
+      <!-- Product Cards -->
       <div class="wrapper-flex">
-        <div class="speaker-container">
-          <img src="assets/price-tag.png" id="price-tag" />
-          <div id="price">FREE</div>
-          <div class="banner-img"></div>
+        <div class="product-container">
           <img
-            src="assets/Speaker_Imgs/ChadMCrowell.jpeg"
-            alt="profile image"
-            class="profile-img"
+            src="https://images.app.goo.gl/yUYfpfdobjKJJcjz6"
+            alt="Nike Air Zoom Pegasus"
+            class="product-img"
           />
-          <h1 class="name">Linux & Docker Fundamentals</h1>
-          <div class="description">
-            <div class="timings">
-              <p><i class="bi bi-calendar-fill"></i>July 11th, 2022</p>
-              <p><i class="bi bi-clock-fill"></i>07:00 AM PT</p>
-            </div>
-            This workshop aims to build a solid Linux and Docker foundation. You will learn about Linux fundamentals, containers and Docker. <br><br>
-          </div>
-          <button class="btn" id="work-1">Register Now</button>
+          <h2 class="product-name">Nike Air Zoom Pegasus</h2>
+          <p class="product-description">
+            Built for speed, the Nike Air Zoom Pegasus offers responsive
+            cushioning and a sleek design for running enthusiasts.
+          </p>
+          <button class="btn" id="shop-now-1">Shop Now</button>
         </div>
-        <div class="speaker-container">
-          <img src="assets/price-tag.png" id="price-tag" />
-          <div id="price">FREE</div>
-          <div class="banner-img"></div>
+
+        <div class="product-container">
           <img
-            src="assets/Speaker_Imgs/Saiyam Pathak.jpg"
-            alt="profile image"
-            class="profile-img"
+            src="https://via.placeholder.com/150"
+            alt="Nike Air Max 270"
+            class="product-img"
           />
-          <h1 class="name">Kubernetes 101</h1>
-          <div class="description">
-            <div class="timings">
-              <p><i class="bi bi-calendar-fill"></i>July 18th, 2022</p>
-              <p><i class="bi bi-clock-fill"></i>07:00 AM PT</p>
-            </div>
-            This workshop helps you learn Kubernetes from scratch. Some of the topics include K8s fundamentals, Pods, Deployments, Services, Ingress & more.
-          </div>
-          <button class="btn" id="work-2">Register Now</button>
+          <h2 class="product-name">Nike Air Max 270</h2>
+          <p class="product-description">
+            With a larger-than-life air unit and breathable upper, the Nike Air
+            Max 270 delivers all-day comfort with an iconic look.
+          </p>
+          <button class="btn" id="shop-now-2">Shop Now</button>
         </div>
-        <div class="speaker-container">
-          <img src="assets/price-tag.png" id="price-tag" />
-          <div id="price">FREE</div>
-          <div class="banner-img"></div>
+
+        <div class="product-container">
           <img
-            src="assets/Speaker_Imgs/dan-garfield.jpeg"
-            alt="profile image"
-            class="profile-img"
+            src="https://via.placeholder.com/150"
+            alt="Nike Pro Dri-FIT"
+            class="product-img"
           />
-          <h1 class="name">GitOps With ArgoCD</h1>
-          <div class="description">
-            <div class="timings">
-              <p><i class="bi bi-calendar-fill"></i>July 25th, 2022</p>
-              <p><i class="bi bi-clock-fill"></i>07:00 AM PT</p>
-            </div>
-            In this workshop you will learn the theory of GitOps and also apply all of those practices in your own application using the Argo project family.
-          </div>
-          <button class="btn" id="work-3">Register Now</button>
+          <h2 class="product-name">Nike Pro Dri-FIT Apparel</h2>
+          <p class="product-description">
+            Stay dry and comfortable with the Nike Pro Dri-FIT, designed for
+            ultimate breathability and freedom of movement.
+          </p>
+          <button class="btn" id="shop-now-3">Shop Now</button>
         </div>
+      </div>
+    </div>
 
     <!-- Client-side Js -->
     <script src="app.js"></script>

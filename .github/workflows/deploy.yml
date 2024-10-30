@@ -3,18 +3,16 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      - main  # This triggers the workflow when code is pushed to the main branch
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the repository code
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up SSH to access EC2
       - name: Add SSH key
         env:
           EC2_KEY: ${{ secrets.EC2_KEY }}
@@ -23,15 +21,14 @@ jobs:
           echo "${EC2_KEY}" > ~/.ssh/ec2-key.pem
           chmod 600 ~/.ssh/ec2-key.pem
 
-      # Step 3: Deploy to EC2 instance
       - name: Deploy to EC2
         env:
           HOST: ${{ secrets.EC2_HOST }}
           USER: ${{ secrets.EC2_USER }}
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/ec2-key.pem $USER@$HOST << 'EOF'
-            cd /home/ubuntu/aws-ec2-nodejs-app  # Change this to your app's location on the EC2 instance
+            cd /home/ubuntu/aws-ec2-nodejs-app  # Update this with your app's location
             git pull origin main
             npm install
-            pm2 restart app  # Assuming you use pm2 to manage your app
+            pm2 start app.js --name your-app-name --watch  # Replace 'app.js' with your entry file
           EOF
